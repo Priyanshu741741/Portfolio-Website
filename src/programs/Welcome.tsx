@@ -6,7 +6,6 @@ import gallery from "../../assets/folder_image.png";
 import pdf from "../../assets/pdf.png";
 import github from "../../assets/github.png";
 import cmd from "../../assets/cmd.png";
-import users from "../../assets/users.png";
 import butterfly from "../../assets/butterfly.png";
 import { AppDirectory } from "@/appData";
 import store from "@/redux/store";
@@ -18,43 +17,28 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import userprofile from "../../assets/userprofile.jpg";
 import userprofile2 from "../../assets/userprofile2.jpg";
-import ebc1 from "../../assets/ebc1.webp";
-import ebc2 from "../../assets/ebc2.webp";
 
-const INTRO = `Hi, I'm Wei Pin, an aspiring software engineer and entrepreneur based in Singapore. I am 
-  currently a Computer Engineering Fresh Graduate at the National University of Singapore and I am
-  passionate about building innovative software solutions that solves problems.`;
+const INTRO = `Hi, I'm Priyanshu Kumar, a Computer Science Engineering student (B.Tech) at PEC University
+  of Technology, Chandigarh. I'm passionate about building full-stack applications, AI/ML solutions,
+  and data-driven tools that solve real-world problems. Currently interning and actively building
+  projects at the intersection of technology and impact.`;
 
-const WHYSITE = `I always love challenging myself to creating something different and interesting.
-The main reason why I chose to create a website that resembles a Windows XP OS is because my 
-software development journey first started back in the early 2010 when I was creating simple utility
-apps such as calculators, web browser, message encrypters, phishing app and simple chatbot using 
-Visual Basic on Visual Studio 2010 out of curiousity and fun. Now that I have more experience in
-software development, I decided to "recreate" the environment I used to work in back then and make
-it feel as though you are accessing my computer directly.`;
+const WHYSITE = `I've always loved challenging myself to create something different and interesting.
+A Windows XP-style portfolio felt like the perfect mix of nostalgia and novelty — it's a fun,
+memorable way to stand out and showcase my projects in an interactive environment. The retro desktop
+interface also pays homage to the era of computing that sparked so many people's love for technology,
+including mine.`;
 
-const INTERESTS = `Other than my interest in developing websites and apps for fun, I love solo
-travelling and exploring new places. It is during these times I get to reflect on my own life and
-step out of my comfort zone to talk to people within the local community and my hostel where I meet
-people from all over the world. Other than that, I am also a firm believer that the best way to 
-learn and grow as a person is to immerse yourself in a different culture and environment. This
-forces you become adaptable to new situations and learn to be more independent and self-reliant.`;
+const INTERESTS = `Beyond coding, I'm deeply interested in AI/ML research, data analytics, and
+entrepreneurship. I love exploring how technology can create meaningful social impact — especially
+in agriculture (AgroIntel), healthcare, and fintech. Hackathons are one of my favourite arenas:
+the time pressure forces rapid learning, fast iteration, and shipping working prototypes under
+real constraints.`;
 
-const INTERESTS2 = `Other than traveling, I love trekking and cycling, and as a challenge to myself, I decided 
-to embark on a journey to the Everest Base Camp. After a 130KM, 2504M grueling vertical ascend from 
-Tenzing-Hillary Airport, widely regarded as some of the world’s most dangerous airports, I made it 
-with a friend of mine and our guide. The entire experience was spectacular as I have also met and struck up 
-conversations with trekkers from all walks of life and background, and we all had a common goal 
-of reaching the top of the base camp.`;
-
-const INTERESTS3 = `Also, I love (really in love with) drone photography and filming! This is my one true passion, as
-the angles I get are much more unique compared to any DSLR/phone camera. The perspectives that
-aerial shots offer are so mesmerizing that it makes you feel like a bird (and this fulfills my 
-desire to be able to fly lol) (You can view some of collection on this website). Lastly, I love 
-to read non-fiction books, especially those that are related to entrepreneurship, biographies, 
-and self-help, as those books usually contain a lot of valuable insights and satiate my curiosity 
-about the lives of others.
-`;
+const INTERESTS2 = `I enjoy collaborating on ambitious projects, contributing to open source, and
+continuously expanding my skills across full-stack development, machine learning, and data
+engineering. I believe the most interesting problems are the ones that haven't been solved yet,
+and building tools for those problems is what drives me to keep creating.`;
 
 interface props {
   id: number;
@@ -86,7 +70,7 @@ const Welcome = ({ id }: props) => {
       {!aboutmeView ? (
         <div>
           <h3 className={styles.welcome_text}>
-            Welcome To Wei Pin&apos;s Personal Website
+            Welcome To Priyanshu&apos;s Personal Website
           </h3>
           <p className={styles.subtitle}>
             Learn more about me by clicking any of the icons below to get
@@ -106,7 +90,7 @@ const Welcome = ({ id }: props) => {
                 tooltip="My Brain Dump"
                 onClick={() => {
                   window.open(
-                    "https://github.com/firwer",
+                    "https://github.com/Priyanshu741741",
                     "_blank",
                     "noreferrer"
                   );
@@ -118,7 +102,7 @@ const Welcome = ({ id }: props) => {
                 tooltip="Connect with me!"
                 onClick={() => {
                   window.open(
-                    "https://www.linkedin.com/in/poh-wei-pin-7b9061183/",
+                    "https://www.linkedin.com/in/priyanshu-kumar/",
                     "_blank",
                     "noreferrer"
                   );
@@ -175,20 +159,6 @@ const Welcome = ({ id }: props) => {
                 height={200}
                 className={styles.profile_pic}
               />
-              <Image
-                alt="profile_pic"
-                src={ebc1.src}
-                width={200}
-                height={200}
-                className={styles.profile_pic}
-              />
-              <Image
-                alt="profile_pic"
-                src={ebc2.src}
-                width={200}
-                height={200}
-                className={styles.profile_pic}
-              />
             </div>
             <div className={styles.text_col}>
               <p className={styles.subtitle}>{INTRO}</p>
@@ -202,8 +172,6 @@ const Welcome = ({ id }: props) => {
               <p className={styles.subtitle}>{INTERESTS}</p>
               <br></br>
               <p className={styles.subtitle}>{INTERESTS2}</p>
-              <br></br>
-              <p className={styles.subtitle}>{INTERESTS3}</p>
             </div>
           </div>
         </div>

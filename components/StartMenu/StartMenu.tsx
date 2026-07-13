@@ -35,7 +35,7 @@ interface StartMenuProps {
 
 const StartMenu = ({ menuControl }: StartMenuProps) => {
   const handleOpenGitHub = () => {
-    window.open("https://github.com/firwer", "_blank", "noreferrer");
+    window.open("https://github.com/Priyanshu741741", "_blank", "noreferrer");
   };
 
   const handleOpenResume = () => {
@@ -44,7 +44,7 @@ const StartMenu = ({ menuControl }: StartMenuProps) => {
 
   const handleOpenLinkedin = () => {
     window.open(
-      "https://www.linkedin.com/in/poh-wei-pin-7b9061183/",
+      "https://www.linkedin.com/in/priyanshu-kumar/",
       "_blank",
       "noreferrer"
     );
@@ -81,7 +81,7 @@ const StartMenu = ({ menuControl }: StartMenuProps) => {
             textShadow: "1px 1px #000000",
           }}
         >
-          Wei Pin&apos;s PC
+          Priyanshu&apos;s PC
         </p>
       </div>
       <hr className={styles.orangehr} />

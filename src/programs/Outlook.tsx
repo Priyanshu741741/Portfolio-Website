@@ -205,7 +205,7 @@ const Outlook = () => {
               disabled
               id="text21"
               type="text"
-              value="Poh Wei Pin (pohwp99@gmail.com)"
+              value="Priyanshu Kumar (via contact form)"
             />
             <input
               className={styles.textfield}

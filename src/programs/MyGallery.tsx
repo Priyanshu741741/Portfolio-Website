@@ -27,14 +27,15 @@ const MyGallery = ({ id }: Props) => {
   });
 
   useEffect(() => {
-    setCurrDisplay(PhotoCollection[0]);
+    if (PhotoCollection.length > 0) setCurrDisplay(PhotoCollection[0]);
   }, []);
 
   const setDisplay = (id: number) => {
-    setCurrDisplay(PhotoCollection[id]);
+    if (PhotoCollection.length > 0) setCurrDisplay(PhotoCollection[id]);
   };
 
   const handlePreviousImage = () => {
+    if (PhotoCollection.length === 0) return;
     if (currDisplay.id === 0) {
       setCurrDisplay(PhotoCollection[PhotoCollection.length - 1]);
       return;
@@ -43,6 +44,7 @@ const MyGallery = ({ id }: Props) => {
   };
 
   const handleNextImage = () => {
+    if (PhotoCollection.length === 0) return;
     if (currDisplay.id === PhotoCollection.length - 1) {
       setCurrDisplay(PhotoCollection[0]);
       return;

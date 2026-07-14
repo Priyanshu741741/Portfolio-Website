@@ -70,6 +70,18 @@ export const TechIcon = {
   GEMINI:
     "https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=google-gemini&logoColor=white",
   SQL: "https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white",
+  EXPRESSJS:
+    "https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white",
+  POSTGRESQL:
+    "https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white",
+  STREAMLIT:
+    "https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white",
+  PLOTLY:
+    "https://img.shields.io/badge/Plotly-239120?style=for-the-badge&logo=plotly&logoColor=white",
+  ANTHROPIC:
+    "https://img.shields.io/badge/Claude_API-D97757?style=for-the-badge&logo=anthropic&logoColor=white",
+  XGBOOST:
+    "https://img.shields.io/badge/XGBoost-FF6600?style=for-the-badge&logo=python&logoColor=white",
 };
 
 export const AppDirectory: Map<number, Tab> = new Map([
@@ -327,12 +339,36 @@ export const WorkData = [
     title: "ITO-Entrepreneur — Mentor-Startup Platform",
     date: "Feb 2026",
     gitURL: "https://github.com/Priyanshu741741/ITO-Entrepreneur",
-    techstack: [TechIcon.REACT, TechIcon.PYTHON, TechIcon.TYPESCRIPT],
+    techstack: [TechIcon.REACT, TechIcon.NODEJS, TechIcon.MONGODB, TechIcon.PYTHON],
     gallery: [],
     overview: `A mentor-startup matching platform featuring 80+ profiles with search and
     filtering. Implemented a KNN-based recommendation model using user preferences and
     category tags to intelligently connect founders with mentors. Engineered 6+ core
-    features including mentor matching, profile filtering, and form submission workflows.`,
+    features including mentor matching, profile filtering, and form submission — built on
+    a React + Node.js + MongoDB full-stack.`,
+  },
+  {
+    id: 11,
+    title: "Meridian — Commercial Card Analytics Platform",
+    date: "Jul 2026",
+    gitURL: "https://github.com/Priyanshu741741/Meridian",
+    techstack: [
+      TechIcon.PYTHON,
+      TechIcon.POSTGRESQL,
+      TechIcon.XGBOOST,
+      TechIcon.STREAMLIT,
+      TechIcon.PLOTLY,
+      TechIcon.ANTHROPIC,
+      TechIcon.SQL,
+    ],
+    gallery: [],
+    overview: `Meridian is a full-stack commercial card analytics platform modeled after
+    enterprise analytics tools at firms like American Express. It seeds 20k synthetic customers
+    and 200k transactions into a 7-table PostgreSQL schema, then runs XGBoost churn and offer
+    acceptance models with SHAP explainability. The AI layer uses the Anthropic Claude API for
+    natural language → SQL queries and executive-level portfolio summaries. Everything is
+    surfaced in a 6-page Streamlit dashboard with Plotly visualizations covering churn, RFM
+    segmentation, campaign ROI, and a live AI analyst interface.`,
   },
   {
     id: 10,
@@ -418,6 +454,13 @@ export const WorkAccordionContent = [
     icon: emptyfile,
     title: "PocketPublish",
     content: WorkData[WorkData.findIndex((x) => x.id === 10)],
+  },
+  {
+    id: 11,
+    type: WorkType.PERSONAL,
+    icon: emptyfile,
+    title: "Meridian — Analytics Platform",
+    content: WorkData[WorkData.findIndex((x) => x.id === 11)],
   },
 ] as WorkFile[];
 

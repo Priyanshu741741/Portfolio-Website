@@ -19,9 +19,10 @@ import userprofile from "../../assets/userprofile.jpg";
 
 const INTRO = `Hi, I'm Priyanshu Kumar — a B.Tech CSE student at Punjab Engineering College (PEC),
   Chandigarh (CGPA: 9.47, Class of 2027). I recently completed a Software Developer Internship at
-  Cvent in Gurugram, where I shipped 73+ production features using Python, Apex, Salesforce, and
-  SQL, and built an ML-based ticket triage system achieving ~88% accuracy. I'm passionate about
-  building impactful AI/ML solutions and full-stack applications that actually matter.`;
+  Cvent in Gurugram, where I engineered React component libraries, resolved 73+ Jira tickets across
+  the full stack using React, Python, and REST APIs, and built an ML-based ticket triage system
+  achieving ~88% accuracy. I'm passionate about full-stack development, AI/ML, and building
+  data-driven tools that actually matter.`;
 
 const WHYSITE = `I've always loved building things that are different and memorable. A Windows XP-style
 portfolio felt like the perfect blend of nostalgia and creativity — a way to stand out from the

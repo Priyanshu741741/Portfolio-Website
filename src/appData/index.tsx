@@ -19,6 +19,7 @@ import file from "../../assets/workaccordion/file.png";
 import emptyfile from "../../assets/workaccordion/emptyfile.png";
 import lul from "../../assets/work/lul.png";
 import butterfly from "../../assets/butterfly.png";
+import solitaire from "../../assets/solitaire.png";
 
 export const TechIcon = {
   REACT:
@@ -184,6 +185,20 @@ export const AppDirectory: Map<number, Tab> = new Map([
       backBtnActive: false,
     },
   ],
+  [
+    9,
+    {
+      id: 0,
+      title: "My Hobbies & Interests",
+      message: "",
+      Icon: solitaire,
+      isMinimized: false,
+      zIndex: 0,
+      program: App.MYHOBBIES,
+      prompt: false,
+      backBtnActive: false,
+    },
+  ],
 ]);
 
 export const WorkAccordionTitles = [
@@ -218,7 +233,7 @@ export const WorkData = [
   {
     id: 2,
     title: "AgroIntel — AI Crop Monitoring App",
-    date: "Mar 2025 - Present",
+    date: "Dec 2025",
     gitURL: "https://github.com/Priyanshu741741/AgroIntel",
     techstack: [
       TechIcon.PYTHON,
@@ -229,12 +244,11 @@ export const WorkData = [
       TechIcon.CSS,
     ],
     gallery: [],
-    overview: `AgroIntel is an AI-powered crop monitoring web application, originally built during
-    the GDG Hackathon. It uses a TensorFlow deep learning model to identify crop health conditions
-    from uploaded images. The app integrates Google Gemini AI for a real-time agricultural chatbot
-    and connects to the OpenWeatherMap API for location-specific weather insights. The frontend
-    features a dark glassmorphism design built with React, and the backend is powered by Flask,
-    deployed on Vercel and Render. Live demo: https://agro-intel-101.vercel.app`,
+    overview: `AgroIntel is an AI-powered crop care application using MobileNetV2 to detect
+    five common plant diseases from uploaded images. Built during the GDG Solution Challenge
+    (Top 10 nationwide), it integrates a real-time Weather API for location-based insights,
+    was tested on 300+ labeled images, and reduced crop diagnosis time by 17%. The Flask
+    backend pairs with a React frontend. Live: https://agro-intel-101.vercel.app`,
   },
   {
     id: 3,
@@ -255,11 +269,10 @@ export const WorkData = [
       "https://github.com/Priyanshu741741/Natwest-AI-Predictive-Forecasting-Stats.AI",
     techstack: [TechIcon.TYPESCRIPT, TechIcon.NEXTJS, TechIcon.PYTHON],
     gallery: [],
-    overview: `An AI-driven predictive forecasting platform built during a Natwest hackathon.
-    The system analyzes business and financial datasets to generate forward-looking statistical
-    predictions using machine learning techniques, providing actionable insights for data-driven
-    decision making. Built with TypeScript and Next.js for the frontend with Python-powered
-    ML models on the backend.`,
+    overview: `An AI-driven predictive forecasting platform built for the NatWest AI Hackathon,
+    where we finished in the Top 10 teams nationwide. The system analyzes business and financial
+    datasets to generate forward-looking statistical predictions using ML techniques, providing
+    actionable insights for data-driven decision making.`,
   },
   {
     id: 5,
@@ -311,15 +324,15 @@ export const WorkData = [
   },
   {
     id: 9,
-    title: "ITO-Entrepreneur",
-    date: "Jul 2026",
+    title: "ITO-Entrepreneur — Mentor-Startup Platform",
+    date: "Feb 2026",
     gitURL: "https://github.com/Priyanshu741741/ITO-Entrepreneur",
-    techstack: [TechIcon.TYPESCRIPT, TechIcon.NEXTJS],
+    techstack: [TechIcon.REACT, TechIcon.PYTHON, TechIcon.TYPESCRIPT],
     gallery: [],
-    overview: `ITO-Entrepreneur is a TypeScript-based platform focused on entrepreneurship
-    resources and startup tools. Built as part of an entrepreneurial initiative, it serves
-    as a digital hub providing startup frameworks, resources, and content for aspiring
-    founders looking to build and scale their ideas.`,
+    overview: `A mentor-startup matching platform featuring 80+ profiles with search and
+    filtering. Implemented a KNN-based recommendation model using user preferences and
+    category tags to intelligently connect founders with mentors. Engineered 6+ core
+    features including mentor matching, profile filtering, and form submission workflows.`,
   },
   {
     id: 10,

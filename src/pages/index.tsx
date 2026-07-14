@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import StartBar from "components/StartBar/StartBar";
 import "xp.css/dist/XP.css";
 import styles from "../styles/Home.module.css";
@@ -12,7 +11,6 @@ import cmd from "../../assets/cmd.png";
 import solitare from "../../assets/solitaire.png";
 import linkedin from "../../assets/linkedin.png";
 import WinForm from "components/WinForm/WinForm";
-import { useEffect, useState } from "react";
 import store from "@/redux/store";
 import { AppDirectory } from "@/appData";
 import { App, RootState, Tab } from "@/types";
@@ -24,6 +22,8 @@ import MyWork from "@/programs/MyWork";
 import MsgBox from "components/MsgBox/MsgBox";
 import Welcome from "@/programs/Welcome";
 import MyGallery from "@/programs/MyGallery";
+import MyHobbies from "@/programs/MyHobbies";
+
 export default function Home() {
   const Tabs = useSelector((state: RootState) => state.tab.tray);
   const currTabID = useSelector((state: RootState) => state.tab.id);
@@ -34,12 +34,12 @@ export default function Home() {
   };
 
   const handleOpenGitHub = () => {
-    window.open("https://github.com/firwer", "_blank", "noreferrer");
+    window.open("https://github.com/Priyanshu741741", "_blank", "noreferrer");
   };
 
   const handleOpenLinkedin = () => {
     window.open(
-      "https://www.linkedin.com/in/poh-wei-pin-7b9061183/",
+      "https://www.linkedin.com/in/priyanshu-kumar-ba82572a5/",
       "_blank",
       "noreferrer"
     );
@@ -52,8 +52,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Wei Pin&apos;s Personal Website - Home Page</title>
-        <meta name="description" content="My Personal Space" />
+        <title>Priyanshu Kumar — Portfolio</title>
+        <meta name="description" content="Priyanshu Kumar's personal portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
@@ -101,14 +101,13 @@ export default function Home() {
             title="My Work"
             img={cmd}
           />
-
           <DesktopIcon
             appID={7}
-            doubleClick={() => void 0}
+            doubleClick={() => handleRunApp(9)}
             title="My Hobbies"
             img={solitare}
           />
-          {Tabs.map((tab, index) => {
+          {Tabs.map((tab) => {
             return tab.isMinimized ? (
               <></>
             ) : (
@@ -130,6 +129,8 @@ export default function Home() {
                   <Welcome id={tab.id} />
                 ) : tab.program === App.MYGALLERY ? (
                   <MyGallery id={tab.id} />
+                ) : tab.program === App.MYHOBBIES ? (
+                  <MyHobbies />
                 ) : tab.program === App.ERROR ? (
                   <p>{tab.message}</p>
                 ) : tab.program === App.INFO ? (

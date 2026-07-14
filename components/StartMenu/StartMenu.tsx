@@ -44,7 +44,7 @@ const StartMenu = ({ menuControl }: StartMenuProps) => {
 
   const handleOpenLinkedin = () => {
     window.open(
-      "https://www.linkedin.com/in/priyanshu-kumar/",
+      "https://www.linkedin.com/in/priyanshu-kumar-ba82572a5/",
       "_blank",
       "noreferrer"
     );

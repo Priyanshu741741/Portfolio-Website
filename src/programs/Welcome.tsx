@@ -16,29 +16,29 @@ import { RootState } from "@/types";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import userprofile from "../../assets/userprofile.jpg";
-import userprofile2 from "../../assets/userprofile2.jpg";
 
-const INTRO = `Hi, I'm Priyanshu Kumar, a Computer Science Engineering student (B.Tech) at PEC University
-  of Technology, Chandigarh. I'm passionate about building full-stack applications, AI/ML solutions,
-  and data-driven tools that solve real-world problems. Currently interning and actively building
-  projects at the intersection of technology and impact.`;
+const INTRO = `Hi, I'm Priyanshu Kumar — a B.Tech CSE student at Punjab Engineering College (PEC),
+  Chandigarh (CGPA: 9.47, Class of 2027). I recently completed a Software Developer Internship at
+  Cvent in Gurugram, where I shipped 73+ production features using Python, Apex, Salesforce, and
+  SQL, and built an ML-based ticket triage system achieving ~88% accuracy. I'm passionate about
+  building impactful AI/ML solutions and full-stack applications that actually matter.`;
 
-const WHYSITE = `I've always loved challenging myself to create something different and interesting.
-A Windows XP-style portfolio felt like the perfect mix of nostalgia and novelty — it's a fun,
-memorable way to stand out and showcase my projects in an interactive environment. The retro desktop
-interface also pays homage to the era of computing that sparked so many people's love for technology,
-including mine.`;
+const WHYSITE = `I've always loved building things that are different and memorable. A Windows XP-style
+portfolio felt like the perfect blend of nostalgia and creativity — a way to stand out from the
+sea of static portfolio pages. The retro desktop interface pays tribute to the era of computing that
+sparked curiosity in so many developers, including me. I figured: why not present myself in an
+environment that itself is a project?`;
 
-const INTERESTS = `Beyond coding, I'm deeply interested in AI/ML research, data analytics, and
-entrepreneurship. I love exploring how technology can create meaningful social impact — especially
-in agriculture (AgroIntel), healthcare, and fintech. Hackathons are one of my favourite arenas:
-the time pressure forces rapid learning, fast iteration, and shipping working prototypes under
-real constraints.`;
+const INTERESTS = `Beyond coding, I'm a National Open Athletics Silver Medalist — I represented
+Chandigarh at the 2023 National Open Meet. I'm also Joint Head of the Women Empowerment Cell at PEC,
+where I led the Period Pain Simulator awareness campaign and secured Rs. 20,000 in sponsorships.
+I've competed at hackathons nationwide — Top 10 at NatWest AI Hackathon, Top 10 at GDG Solution
+Challenge, and Top 20 at ZS Associates Hackathon.`;
 
-const INTERESTS2 = `I enjoy collaborating on ambitious projects, contributing to open source, and
-continuously expanding my skills across full-stack development, machine learning, and data
-engineering. I believe the most interesting problems are the ones that haven't been solved yet,
-and building tools for those problems is what drives me to keep creating.`;
+const INTERESTS2 = `I hold a 100% Merit Fee Waiver scholarship for ranking among the top students in
+my department, and I'm always exploring new technologies — whether that's Salesforce Apex, Databricks,
+Snowflake, or the latest LLM APIs. I believe the most interesting problems are the ones nobody has
+solved yet, and building tools for those problems is what keeps me going.`;
 
 interface props {
   id: number;
@@ -65,6 +65,7 @@ const Welcome = ({ id }: props) => {
   useEffect(() => {
     setAboutmeView(backBtnActive);
   }, [backBtnActive]);
+
   return (
     <div className={styles.main}>
       {!aboutmeView ? (
@@ -98,11 +99,11 @@ const Welcome = ({ id }: props) => {
               />
               <WelcomeIcon
                 img={linkedin}
-                text={"My Linkedin"}
+                text={"My LinkedIn"}
                 tooltip="Connect with me!"
                 onClick={() => {
                   window.open(
-                    "https://www.linkedin.com/in/priyanshu-kumar/",
+                    "https://www.linkedin.com/in/priyanshu-kumar-ba82572a5/",
                     "_blank",
                     "noreferrer"
                   );
@@ -121,7 +122,7 @@ const Welcome = ({ id }: props) => {
               <WelcomeIcon
                 img={cmd}
                 text={"My Work"}
-                tooltip="Interesting projects I have done"
+                tooltip="Projects I've built"
                 onClick={() => handleRunApp(2)}
               />
               <WelcomeIcon
@@ -132,8 +133,8 @@ const Welcome = ({ id }: props) => {
               />
               <WelcomeIcon
                 img={gallery}
-                text={"My Photography Collection"}
-                tooltip="Click to view!"
+                text={"My Photography"}
+                tooltip="Coming soon!"
                 onClick={() => handleRunApp(4)}
               />
             </div>
@@ -142,35 +143,27 @@ const Welcome = ({ id }: props) => {
       ) : (
         <div>
           <h3 className={styles.welcome_text}>About Me</h3>
-          <p className={styles.subtitle}></p>
           <div className={styles.content}>
             <div className={styles.pic_col}>
               <Image
-                alt="profile_pic"
+                alt="Priyanshu Kumar"
                 src={userprofile.src}
-                width={200}
-                height={200}
-                className={styles.profile_pic}
-              />
-              <Image
-                alt="profile_pic"
-                src={userprofile2.src}
-                width={200}
-                height={200}
+                width={220}
+                height={220}
                 className={styles.profile_pic}
               />
             </div>
             <div className={styles.text_col}>
               <p className={styles.subtitle}>{INTRO}</p>
               <h3 className={styles.subtitle_header}>
-                Why a personal website like this?
+                Why a website like this?
               </h3>
               <p className={styles.subtitle}>{WHYSITE}</p>
               <h3 className={styles.subtitle_header}>
-                What are your interests?
+                Beyond the code
               </h3>
               <p className={styles.subtitle}>{INTERESTS}</p>
-              <br></br>
+              <br />
               <p className={styles.subtitle}>{INTERESTS2}</p>
             </div>
           </div>
